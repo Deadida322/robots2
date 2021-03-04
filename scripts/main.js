@@ -27,6 +27,8 @@ function up1(){
     $('.arrows img').css({"opacity":"0",
                     'zIndex':'-30000',
                     'transform:': 'scale(0)'});
+    page4.css('zIndex','0');
+    page3.css('zIndex','0');
 }
 function up2(){
     $('nav').css({
@@ -95,6 +97,8 @@ function down2(){
     brush2.removeClass('brushdal2');
     brush3.removeClass('brushdal1');
     brush4.removeClass('brushdal0');
+    page4.css('zIndex','0');
+    page3.css('zIndex','0');
 }
 function down3(){
     $('.navcontainer').css({
@@ -127,8 +131,9 @@ $('.arrows').on('click', ()=>{
 });
 function scroll1(event){
         if(event.originalEvent.deltaY != 0){
-          posY = Math.floor(posY + event.originalEvent.deltaY/100);
-          if (posY <0){
+          posY = (posY + event.originalEvent.deltaY/100);
+          console.log(posY);
+          if (posY <= -1){
               posY = 0;
           }
           if (posY>16){
