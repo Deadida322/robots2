@@ -24,11 +24,16 @@ a:hover{
     font-family: RobotoRegular; 
     src: url(fonts/Roboto-Regular.ttf);
 }
+
 body{
+    
     font-family: RobotoLight;
     color: #ddedff;
     background-color: #262626;
-
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
 }
 .loading{
     display: none;
@@ -243,22 +248,22 @@ img{
 .dal3{
     transform: scale(2);
     opacity: 0;
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(1px);
 }
 .dal1{
     transform: scale(1);
     opacity: 1;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(5px);
 }
 .bl1{
     opacity: 0.5;
     transform: scale(0.7);
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(1px);
 }
 .bl2{
     opacity: 0;
     transform: scale(0.5);
-    backdrop-filter: blur(0px);
+    backdrop-filter: blur(1px);
 }
 .arrows{
     position: fixed;
