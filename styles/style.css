@@ -37,9 +37,6 @@ body{
     width: 100vw;
     height: 100vh;
 }
-.loading{
-    display: none;
-}
 .brush,.brush1{
     z-index: 1;
     position: absolute;
@@ -507,6 +504,231 @@ nav:hover{
 .revers_img{
     animation: revers 1.5s ease-in-out infinite forwards;
 }
+.loading{
+    -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    top: 9%;
+    background-color: #262626;
+    z-index: 99999999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: fade 1s ease-in 1 forwards;
+            animation: fade 1s ease-in 1 forwards;
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s;
+}
+.l1{
+    position: absolute;
+    z-index: 4;
+    width: 4%;
+    top: 31.5%;
+    left: 48.2%;
+    z-index: 3;
+    -webkit-animation: rotate5 0.5s linear 10 forwards;
+            animation: rotate5 0.5s linear 10 forwards;
+}
+.l2{
+    position: absolute;
+    width: 6%;
+    top: 27.5%;
+    left: 47.1%;
+    z-index: 3;
+    -webkit-animation: rotate4 5s linear 2 forwards;
+            animation: rotate4 5s linear 2 forwards;
+}
+.l3{
+    position: absolute;
+    width: 20%;
+    top: 16.5%;
+    left: 40.1%;
+    z-index: 2;
+    -webkit-animation: rotate3 5s linear 2 forwards;
+            animation: rotate3 5s linear 2 forwards;
+}
+.l4{
+    position: absolute;
+    width: 22%;
+    top: 13%;
+    left: 39%;
+    z-index: 1;
+    -webkit-animation: rotate2 2s ease-in-out 3 alternate;
+            animation: rotate2 2s ease-in-out 3 alternate;
+}
+.l5{
+    position: absolute;
+    width: 25%;
+    top: 10%;
+    left: 37.5%;
+    z-index: 0;
+    -webkit-animation: rotate1 1s ease-in-out 6 alternate;
+            animation: rotate1 1s ease-in-out 6 alternate;
+}
+@-webkit-keyframes rotate1{
+    0%{
+        -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+    }
+    100%{
+        -webkit-transform: scale(1.03);
+                transform: scale(1.03);
+    }
+}
+@keyframes rotate1{
+    0%{
+        -webkit-transform: scale(1.0);
+                transform: scale(1.0);
+    }
+    100%{
+        -webkit-transform: scale(1.03);
+                transform: scale(1.03);
+    }
+}
+@-webkit-keyframes rotate2{
+    0%{
+        -webkit-transform: scale(1.0) rotate(0deg);
+                transform: scale(1.0) rotate(0deg);
+    }
+    100%{
+        -webkit-transform: scale(1.01) rotate(360deg);
+                transform: scale(1.01) rotate(360deg);
+    }
+}
+@keyframes rotate2{
+    0%{
+        -webkit-transform: scale(1.0) rotate(0deg);
+                transform: scale(1.0) rotate(0deg);
+    }
+    100%{
+        -webkit-transform: scale(1.01) rotate(360deg);
+                transform: scale(1.01) rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate3{
+    0%{
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+    }
+    100%{
+        -webkit-transform: rotate(-720deg);
+                transform: rotate(-720deg);
+    }
+}
+@keyframes rotate3{
+    0%{
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50%{
+        -webkit-transform: rotate(-360deg);
+                transform: rotate(-360deg);
+    }
+    100%{
+        -webkit-transform: rotate(-720deg);
+                transform: rotate(-720deg);
+    }
+}
+@-webkit-keyframes rotate4{
+    0%{
+        -webkit-transform: scale(1.0) rotate(0deg);
+                transform: scale(1.0) rotate(0deg);
+    }
+    100%{
+        -webkit-transform: scale(1.07) rotate(-160deg);
+                transform: scale(1.07) rotate(-160deg);
+    }
+}
+@keyframes rotate4{
+    0%{
+        -webkit-transform: scale(1.0) rotate(0deg);
+                transform: scale(1.0) rotate(0deg);
+    }
+    100%{
+        -webkit-transform: scale(1.07) rotate(-160deg);
+                transform: scale(1.07) rotate(-160deg);
+    }
+}
+@-webkit-keyframes rotate5{
+    0%{
+        -webkit-transform: scale(1.0) rotate(0deg);
+                transform: scale(1.0) rotate(0deg);
+    }
+    100%{
+        -webkit-transform: scale(1.0) rotate(360deg);
+                transform: scale(1.0) rotate(360deg);
+    }
+}
+@keyframes rotate5{
+    0%{
+        -webkit-transform: scale(1.0) rotate(0deg);
+                transform: scale(1.0) rotate(0deg);
+    }
+    100%{
+        -webkit-transform: scale(1.0) rotate(360deg);
+                transform: scale(1.0) rotate(360deg);
+    }
+}
+@-webkit-keyframes fade{
+    0%{ 
+        top: 10%;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+        opacity: 100%;
+    }
+    99%{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    100%{
+        top: 0%;
+        -webkit-transform: scale(0.1);
+                transform: scale(0.1);
+        display: none;
+        opacity: 0%;
+        z-index: 0;
+    }
+}
+@keyframes fade{
+    0%{ 
+        top: 10%;
+        -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+        opacity: 100%;
+    }
+    99%{
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+    100%{
+        top: 0%;
+        -webkit-transform: scale(0.1);
+                transform: scale(0.1);
+        display: none;
+        opacity: 0%;
+        z-index: 0;
+    }
+}
+@-webkit-keyframes fade2{
+    0%{ 
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@keyframes fade2{
+    0%{ 
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
 @media screen and (max-width: 1650px){
     html{
         font-size: 17px;
@@ -541,7 +763,7 @@ nav:hover{
     .dal1{
         transform: scale(1);
         opacity: 1;
-        backdrop-filter: blur(0px);
+        backdrop-filter: blur(2px);
     }
     .bl1{
         opacity: 0.5;

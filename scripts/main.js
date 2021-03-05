@@ -300,6 +300,20 @@ if(mobile_width){
                 down3();
             }
         }
-   
     });
 }
+
+up1();
+
+setTimeout(()=>{
+    down1();
+}, 1000);
+
+setTimeout(()=>{
+    up2();
+}, 2000);
+
+setTimeout(()=>{
+    down2();
+    down1();
+}, 3000);
