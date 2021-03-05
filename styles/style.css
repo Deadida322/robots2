@@ -100,7 +100,7 @@ body{
 }
 .page1_header{
     font-family: RobotoBold; 
-    font-size: 20em;
+    font-size: 16em;
     margin: 0em;
 }
 .page1_subheader{ 
@@ -109,7 +109,7 @@ body{
 }
 img{
     -webkit-user-select: none;
--moz-user-select: none;
+    -moz-user-select: none;
 }
 .page2_header{
     padding: .5em;
@@ -729,9 +729,17 @@ nav:hover{
         opacity: 100%;
     }
 }
+.page4_social_container{
+    padding-right: 7em;
+}
 @media screen and (max-width: 1650px){
     html{
         font-size: 17px;
+    }
+    .page1_header{
+        font-family: RobotoBold; 
+        font-size: 14em;
+        margin: 0em;
     }
 }
 @media screen and (max-width: 950px){
