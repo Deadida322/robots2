@@ -88,6 +88,9 @@ function down1(){
     brush1.removeClass('brushdal2');
     brush2.removeClass('brushdal1');
     brush3.removeClass('brushdal0');
+    $('.arrows img').css({"opacity":"1",
+                    'zIndex':'99999',
+                    'transform:': 'scale(1)'});
 }
 function down2(){
     $('.navcontainer').css({
