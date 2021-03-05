@@ -1,8 +1,10 @@
+nav,.navcontainer,.brush1,.brush2,.brush3,.brush4,.page1,.page2,.page3,.page4{
+    transition: 1s ease-in-out;
+}
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: 1s ease-in-out;
 }
 html { 
     font-size: 20px;
@@ -97,7 +99,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 5em ;
+    padding-bottom: 8em ;
 }
 .page1_header{
     font-family: RobotoBold; 
@@ -202,6 +204,9 @@ img{
 .social_back,.team_back{
     position: absolute;
 }
+.social_back_img{
+    width: 30em;
+}
 .team_back_img{
     width: 16em;
 }
@@ -265,6 +270,30 @@ img{
     transform: scale(0.5);
     backdrop-filter: blur(1px);
 }
+/*
+*/
+
+.dal3m{
+    transform: scale(2);
+    opacity: 0;
+    backdrop-filter: blur(0px);
+}
+.dal1m{
+    transform: scale(1);
+    opacity: 1;
+    backdrop-filter: blur(0px);
+}
+.bl1m{
+    opacity: 0.5;
+    transform: scale(0.7);
+    backdrop-filter: blur(0px);
+}
+.bl2m{
+    opacity: 0;
+    transform: scale(0.5);
+    backdrop-filter: blur(0px);
+}
+/**/
 .arrows{
     position: fixed;
     -webkit-user-select: none;
@@ -272,7 +301,7 @@ img{
         -ms-user-select: none;
             user-select: none;
     cursor: pointer;
-    z-index: 2999;
+    z-index: 9999999;
 }
 
 .arrow{
@@ -317,7 +346,7 @@ img{
         margin-bottom: 0px;
     }
     100%{
-        margin-bottom: 15px;
+        margin-bottom: 1em;
     }
 }
 @keyframes arrow1{
@@ -325,7 +354,7 @@ img{
         margin-bottom: 0px;
     }
     100%{
-        margin-bottom: 15px;
+        margin-bottom: 1em;
     }
 }
 @-webkit-keyframes arrow2{
@@ -333,7 +362,7 @@ img{
         margin-bottom: 0px;
     }
     100%{
-        margin-bottom: 30px;
+        margin-bottom: 2em;
     }
 }
 @keyframes arrow2{
@@ -341,7 +370,7 @@ img{
         margin-bottom: 0px;
     }
     100%{
-        margin-bottom: 30px;
+        margin-bottom: 2em;
     }
 }
 
@@ -420,6 +449,17 @@ nav:hover{
         margin-bottom: 5px;
     }
 }
+@keyframes revers{
+    0%{
+        transform: rotate(0);
+    }
+    70%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .navstat{
     width: 20px;
     height: 50px;
@@ -447,9 +487,78 @@ nav:hover{
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
-
+.mobile_revers{
+    
+    background-color: #262626;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999;
+    display: none;
+}
+.revers_info{
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.revers_img{
+    animation: revers 1.5s ease-in-out infinite forwards;
+}
 @media screen and (max-width: 1650px){
     html{
         font-size: 17px;
+    }
+}
+@media screen and (max-width: 950px){
+    html{
+        font-size: 9px;
+    }
+    nav{
+        display: none;
+    }
+    .social_back_img{
+        width: 25em;
+    }
+    .page4_social_container{
+        padding-right: 7em;
+    }
+    .page4_container,.page3_container,.page2_container,.page1_container{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 8em ;
+    }
+    .dal3{
+        transform: scale(2);
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    .dal1{
+        transform: scale(1);
+        opacity: 1;
+        backdrop-filter: blur(0px);
+    }
+    .bl1{
+        opacity: 0.5;
+        transform: scale(0.7);
+        backdrop-filter: blur(0px);
+    }
+    .bl2{
+        opacity: 0;
+        transform: scale(0.5);
+        backdrop-filter: blur(0px);
+    }
+    .arm{
+        transform: scale(1, -1);;
+    }
+}
+@media screen and (max-width: 450px){
+    .mobile_revers{
+        display: flex;
     }
 }

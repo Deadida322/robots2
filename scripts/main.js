@@ -10,6 +10,12 @@ let brush1 = $('.brush1');
 let brush2 = $('.brush2');
 let brush3 = $('.brush3');
 let brush4 = $('.brush4');
+let mobile_width = false;
+let mCount = 0;
+let reverse = false;
+if (document.documentElement.clientWidth < 950){
+    mobile_width = true;
+}
 function up1(){
     $('nav').css({
         backgroundColor: 'rgba(0, 26, 255, 0.202)'
@@ -24,9 +30,11 @@ function up1(){
     brush1.addClass('brushdal2');
     brush2.addClass('brushdal1');
     brush3.addClass('brushdal0');
-    $('.arrows img').css({"opacity":"0",
+    if(!mobile_width){
+        $('.arrows img').css({"opacity":"0",
                     'zIndex':'-30000',
                     'transform:': 'scale(0)'});
+    }
     page4.css('zIndex','0');
     page3.css('zIndex','0');
 }
@@ -258,3 +266,40 @@ $('.up').on('click', function(event) {
         down3();
     }
 });
+if(mobile_width){
+    $('.arrows').on('click', ()=>{
+        
+        if(!reverse){
+            mCount++;
+            if (mCount ==2){
+                up1();
+                mCount++;
+            }
+            if (mCount ==3){
+                up2();
+                
+            }
+            if (mCount ==4){
+                up3();
+                reverse = true;
+                $('.arrm').addClass('arm');
+            }
+            console.log(mCount)
+        }
+        if(reverse){
+            mCount--;
+            if (mCount ==0){
+                down1();
+                $('.arrm').removeClass('arm');
+                reverse = false;
+            }
+            if (mCount ==1){
+                down2();
+            }
+            if (mCount ==2){
+                down3();
+            }
+        }
+   
+    });
+}
