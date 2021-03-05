@@ -766,7 +766,7 @@ nav:hover{
     .dal1{
         transform: scale(1);
         opacity: 1;
-        backdrop-filter: blur(1px);
+        backdrop-filter: blur(0px);
     }
     .bl1{
         opacity: 0.5;
