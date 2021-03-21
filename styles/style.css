@@ -255,17 +255,22 @@ img{
 .dal1{
     transform: scale(1);
     opacity: 1;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
 }
 .bl1{
     opacity: 0.5;
     transform: scale(0.7);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0px);
 }
 .bl2{
-    opacity: 0;
+    opacity: .3;
     transform: scale(0.5);
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(0px);
+}
+.bl3{
+    opacity: .0;
+    transform: scale(.3);
+    backdrop-filter: blur(0px);
 }
 /*
 */
@@ -286,7 +291,7 @@ img{
     backdrop-filter: blur(0px);
 }
 .bl2m{
-    opacity: 0;
+    opacity: .3;
     transform: scale(0.5);
     backdrop-filter: blur(0px);
 }
@@ -744,7 +749,7 @@ nav:hover{
 }
 @media screen and (max-width: 950px){
     nav,.navcontainer,.brush1,.brush2,.brush3,.brush4,.page1,.page2,.page3,.page4{
-        transition: .7s ease-in-out;
+        transition: 1.2s ease-in-out;
     }
     html{
         font-size: 9px;

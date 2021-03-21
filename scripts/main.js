@@ -65,6 +65,7 @@ function up3(){
     });
     title.html('Соцсети');
     $('.stat').html('Social');
+    page1.addClass('bl3');
     page2.addClass('bl2');
     page3.addClass('bl1');
     page4.addClass('dal1');
@@ -84,6 +85,7 @@ function down1(){
     title.html('Главная');
     $('.stat').html('Main');
     page1.removeClass('bl1');
+    
     page2.removeClass('dal1');
     brush1.removeClass('brushdal2');
     brush2.removeClass('brushdal1');
@@ -135,6 +137,7 @@ function down3(){
     page4.removeClass('dal1');
     page4.css('zIndex','8');
     page3.css('zIndex','999999');
+    page1.removeClass('bl3');
 }
 $('.arrows').on('click', ()=>{
     up1();
